@@ -1,0 +1,72 @@
+/* pages/goodDetail/goodDetail.wxss */
+swiper {
+  height: 426rpx;
+  width: 100%;
+} 
+swiper image {
+  height: 100%;
+  width: 100%;
+} 
+.slide-image{
+  height: 100%;
+  width: 100%;
+}
+.price{
+  width: 90%;
+  height: 145rpx;
+  margin: 20rpx auto;
+}
+.stock{
+  border-top:20rpx solid #ececec;
+  border-bottom:20rpx solid #ececec;
+  width: 93%;
+  padding: 30rpx;
+}
+.stock-item{
+  flex:2;
+  font-size:30rpx;
+}
+.detail{
+  text-align: center;
+  width: 90%;
+  margin: 30rpx auto;
+}
+.title{
+  font-size:30rpx;
+  color: #ebcc6d;
+}
+.img{
+  width: 100%;
+  margin: 30rpx auto;
+}
+.con{
+  margin-top: 30rpx;
+  text-align: left;
+  font-size: 30rpx;
+}
+.nav{
+  width: 100%;
+  height:128rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff; 
+  font-size: 30rpx;
+  text-align: center;
+  border-top:1px solid #ececec;
+}
+.nav-item{
+  flex:1.2;
+  margin-top: 20rpx;
+}
+.nav-con{
+  flex:1.5;
+  line-height: 128rpx;
+  font-size: 32rpx;
+}
+.tubiao{
+  width:48rpx;
+  height:48rpx;
+  border: 1px solid red;
+  margin: 0 auto;
+}

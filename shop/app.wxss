@@ -8,3 +8,14 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.flex{
+  display: flex;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.x_center{
+  display: flex;
+  align-items: center;
+}

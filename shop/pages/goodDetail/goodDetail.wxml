@@ -1,0 +1,49 @@
+<!--商品详情-->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for='{{imgUrls}}'>
+        <swiper-item>
+          <image src='{{item}}' class='slide-image'></image>
+        </swiper-item>
+    </block>
+  </swiper>
+  <view class='price column'>
+    <text style='font-size:40rpx;font-weight:600;'>￥300</text>
+    <text style='font-size:32rpx;margin-top:30rpx;'>金士顿U盘</text>
+  </view>
+</view>
+<view class='stock flex'>
+     <view class='stock-item'>月销：20</view>
+     <view class='stock-item'>库存：20</view>
+     <view class='stock-item'>浏览次数：300</view>
+</view>
+<view class='detail'>
+  <text class='title'>宝贝详情</text>
+  <view class='img'>
+    <image src='../../image/10.jpg' style='width:100%;height:300rpx;'></image>
+    <image src='../../image/10.jpg' style='width:100%;height:300rpx;'></image>
+  </view>
+  <text class='title'>商品介绍</text>
+  <view class='con'>
+    正确的护理和保护方法可以确保施华洛世奇水晶饰品的璀璨光芒，是水晶饰品保持持久亮丽
+  </view>
+</view>
+<view style='height:150rpx;'></view>
+<view class='nav flex'>
+   <view class='nav-item column'>
+      <image class='tubiao'></image>
+      <text>商家</text>
+   </view>
+   <view class='nav-item column'>
+      <image class='tubiao'></image>
+      <text>收藏</text>
+   </view>
+   <view class='nav-con' style='background:#ececec;'>加入购物车</view>
+   <view class='nav-con' style='background:#ebcc6d;'>立即购买</view>
+</view>
+
+
+<!--立即购买-->
+
+
+<!--加入购物车-->
