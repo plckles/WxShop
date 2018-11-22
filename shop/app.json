@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/tabvar/index/index",
+    "pages/shop/shop",
+    "pages/"
   ],
   "window":{
     "backgroundTextStyle":"light",
