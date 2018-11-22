@@ -1,8 +1,14 @@
 {
   "pages":[
+<<<<<<< HEAD
     "pages/tabvar/index/index",
     "pages/shop/shop",
     "pages/"
+=======
+    "pages/index/index",
+    "pages/test/test",
+    "pages/logs/logs"
+>>>>>>> 404f594f52b51b7a8bc0654b8a8a753b2a2f8ba3
   ],
   "window":{
     "backgroundTextStyle":"light",
