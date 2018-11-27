@@ -1,0 +1,98 @@
+<!--确认订单-->
+<view class='content flex'>
+  <image src='../../image/10.jpg' style='width:220rpx;height:180rpx;'></image>
+  <view class='con-item column'>
+    <text class='jiage'>金士顿U盘</text>
+    <text class='futitle'>颜色分类：黑色，尺码：xl</text>
+    <text class='jiage'>￥399</text>
+  </view>
+</view>
+<view class='lab flex'>
+    <text class='num'>购买数量</text>
+    <view style='margin-top:5rpx;display:flex;text-align:center;font-size:24rpx;'>
+        <image  mode='scaleToFill' data-num='{{num}}' bindtap='jian' style='width:35rpx;height:35rpx;' src='../../image/jian.png'></image>
+        <text class='nums'>{{num}}</text>
+        <image bindtap='jia' data-num='{{num}}' mode='scaleToFill' style='width:38rpx;height:38rpx;' src='../../image/jia.png'></image>
+    </view>
+</view>
+<view class='address'>
+  <view class='add-item flex'>
+    <text class='num'>配送方式</text>
+    <view bindtap='checkPay' wx:for="{{payType}}" data-id='{{item.id}}'>
+       <image style='width:35rpx;height:35rpx;' src='../../image/{{item.pay? "select":"sel"}}.png'></image>
+       <text class='num'>{{item.name}}</text>
+       <!-- <image style='width:35rpx;height:35rpx;margin-left:30rpx;' data-index='2' src='../../image/{{pay? "sel":"select"}}.png'></image>
+       <text class='num'>快递</text> -->
+    </view>
+  </view>
+  <view style="display:{{paytypes==2? 'block':'none'}}">
+      <view class='add-con flex' style="height:98rpx;line-height:98rpx;">
+          <image style='width:52rpx;height:58rpx;margin-top:20rpx;' src='../../image/address.png'></image>
+          <text style='margin-left:30rpx;'>收货地址:</text>
+          <input type='text' placeholder='上海市华山路1901号' style='margin-left:20rpx;width:65%;height:98rpx;line-height:98rpx;'></input>
+      </view>
+  </view>
+</view>
+<view class='address column'>
+    <text class='addre'  style='margin-top:20rpx;'>收货人：某某</text>
+    <text class='addre'>联系方式：12456545853</text>
+</view>
+<view class='address flex' style='height:88rpx;line-height:88rpx;'>
+    <text style='margin-left:35rpx;'>买家留言:</text>
+    <input type='text' style='margin-left:20rpx;width:70%;height:88rpx;line-height:88rpx;' maxlength='30'></input>
+</view>
+<view class='address' style='height:88rpx;line-height:88rpx;text-align:right;'>
+    <text>共{{num}}件商品</text>
+    <text style='margin:35rpx;'>小计:￥399.00</text>
+</view>
+<view class='nav flex'>
+   <view class='nav-con' style='flex:1.5;'>合计金额：<text style='color:#ebcc6d;'>￥399.00</text></view>
+   <view class='nav-con' style='background:#ebcc6d;'  bindtap='submit'>提交订单</view>
+</view>
+
+<!--确认付款-->
+<view class="shadel" style="display:{{showData? 'block':'none'}}" bindtap='quxiao'></view>
+<view class='selModel' style="display:{{showModel? 'block':'none'}}">
+    <view class='botm' style='text-align:center;'>
+      <text>确认付款</text>
+      <image style='width:38rpx;height:38rpx;float:right;padding:30rpx;' src='../../image/close.png' bindtap='close'></image>
+    </view>
+    <view class='botm' style='text-align:center;width:100%;font-size:48rpx;font-weight:600;'>￥399.00</view>
+    <view class='botm pay flex'  bindtap='select'>
+      <text style='font-size:32rpx;margin-left:30rpx;'>付款方式</text>
+      <image class='img' src='../../image/fh.png'></image>
+    </view>
+    <view class='nav-1' catchtap='showInputLayer'>立即付款</view>
+</view>
+
+<!--选择付款方式-->
+<view class='selModel' style="display:{{showPay? 'block':'none'}}">
+    <view style='padding:30rpx;text-align:center;border-bottom:1px solid #ececec;'>
+      <image style='width:34rpx;height:48rpx;float:left' src='../../image/left.png' bindtap='fanhui'></image>
+      <text>确认付款</text>
+    </view>
+    <view class='fanshi flex'>
+      <image style='width:58rpx;height:53rpx;margin-top:5rpx;' src='../../image/wechat.png'></image>
+      <view style='margin-left:50rpx;'>微信</view>
+    </view>
+    <view class='fanshi flex'>
+      <image style='width:58rpx;height:53rpx;margin-top:5rpx;' src='../../image/balance.png'></image>
+      <view style='margin-left:50rpx;'>会员卡余额</view>
+    </view>
+</view>
+
+<!-- 密码输入框 -->
+<view wx:if='{{showPayPwdInput}}' class='selModel'>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>

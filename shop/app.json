@@ -1,9 +1,12 @@
 {
   "pages":[
     "pages/goodDetail/goodDetail",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail",
     "pages/index/index",
-    "pages/test/test",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/msg/msg",
+    "pages/balance/balance"
   ],
   "window":{
     "backgroundTextStyle":"light",

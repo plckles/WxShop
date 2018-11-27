@@ -13,7 +13,10 @@ Page({
       '../../image/1.jpg',
       '../../image/8.jpg',
       '../../image/10.jpg'
-    ]
+    ],
+    showData: false,
+    showModel: false,
+    num: 1,//购买数量
   },
 
   /**
@@ -70,5 +73,69 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /*加入购物车 */
+  shopCart(e){
+    var that=this;
+    var id = e.currentTarget.dataset.index;
+    console.log(e.currentTarget.dataset.index)
+    that.setData({
+      showData: true,
+      showModel: true,
+      id:id
+    })
+  },
+  /*立即购买 */
+  purchase(e){
+    var that = this;
+    var id = e.currentTarget.dataset.index;
+    console.log(e.currentTarget.dataset.index)
+    that.setData({
+      showData: true,
+      showModel: true,
+      id: id
+    })
+  },
+  close(){
+    var that = this;
+    that.setData({
+      showData: false,
+      showModel: false
+    })
+  },
+  // 加减数量
+  jian(e) {
+    var num = e.currentTarget.dataset.num
+    if (num > 1) {
+      this.setData({
+        num: --num
+      })
+    }
+  },
+  jia(e) {
+    var num = e.currentTarget.dataset.num
+    //console.log()
+    ++num
+    if (num >= 1) {
+      this.setData({
+        num: num++
+      })
+    }
+  },
+  /*提交 */
+  confirm(){
+    var that = this;
+    console.log(that.data.id)
+    if(that.data.id == 1){
+
+    }else{
+      that.setData({
+        showData: false,
+        showModel: false
+      })
+      wx.navigateTo({
+        url: '../order/order',
+      })
+    }
   }
 })

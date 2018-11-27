@@ -1,0 +1,163 @@
+/* pages/order/order.wxss */
+.content{
+  width: 90%;
+  margin: 30rpx auto;
+}
+.con-item{
+  margin-left:30rpx;
+}
+.jiage{
+  font-size:34rpx;
+  font-weight:600;
+  margin-top: 20rpx;
+}
+.futitle{
+  font-size: 32rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.lab{
+  justify-content: space-between;
+  border-top: 10rpx solid #ececec;
+  width: 93%;
+  padding: 30rpx;
+}
+.num{
+  font-size: 34rpx;
+  margin-left:10rpx;
+}
+.nums{
+  margin:0 20rpx auto;
+}
+.address{
+  border-top: 10rpx solid #ececec;
+  font-size: 32rpx;
+}
+.add-item{
+  width: 90%;
+  margin: 30rpx auto;
+  justify-content: space-between;
+}
+.add-con{
+   border-top: 1px solid #ececec;
+   width: 90%;
+   margin: 0 auto;
+   font-size: 32rpx;
+}
+.addre{
+  width: 90%;
+  margin:0 auto;
+  padding-bottom: 20rpx;
+}
+.nav{
+  width: 100%;
+  height:98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff; 
+  font-size: 30rpx;
+  text-align: center;
+  border-top:1px solid #ececec;
+}
+.nav-con{
+  flex:1;
+  line-height: 98rpx;
+  font-size: 32rpx;
+}
+
+
+.shadel{
+  width: 100%;
+  height: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(0,0,0,0.5);
+}
+.selModel{
+  position: fixed;
+  background: #fff;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height:800rpx;
+  z-index:999;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+}
+.botm{
+  border-bottom: 1px solid #ececec;
+  height:97rpx;
+  line-height:97rpx;
+}
+.pay{
+  justify-content: space-between;
+}
+.img{
+  width:28rpx;
+  height:48rpx;
+  margin: 23rpx;
+}
+.fanshi{
+  height:58rpx;
+  line-height:58rpx;
+  padding:30rpx;
+  border-bottom: 1px solid #ececec;
+}
+.nav-1{
+  width: 100%;
+  height:88rpx;
+  line-height: 88rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #ebcc6d; 
+  font-size: 33rpx;
+  text-align: center;
+}
+
+
+
+
+/* 支付密码css start */
+.input_main{
+    position: fixed; left: 0; bottom: 500rpx; width: 100%; height: 394rpx;
+    background-color: #fff; z-index: 9999;
+}
+.input_title{
+    width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; 
+    font-size: 32rpx; border-bottom: 1rpx solid #e2e2e2;
+}
+.input_back{
+    position: absolute; left: 0; top: 0;
+    width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_back text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-45deg);
+}
+
+/* 密码掩码模拟 */
+.input_row{
+  width: 690rpx; margin: 80rpx auto; height: 98rpx; position: relative;
+  display: flex; align-items: center; border: 1rpx solid #e2e2e2; border-radius: 20rpx;
+}
+.input_row .pwd_item{
+  flex: 1; display: flex; align-items: center; justify-content: center; 
+  height: 100%; border-right: 1rpx solid #e2e2e2; position: relative;
+}
+.pwd_item:nth-last-of-type(1) { border-right: 0; } 
+.pwd_item text { 
+  width: 30rpx; height: 30rpx; border-radius: 30rpx; background-color: #555;
+}
+
+/* 文本输入框位置: 设置到左边隐藏 */
+.input_control { 
+  position: relative; left: -300rpx; bottom: 0; width: 100rpx; height: 100rpx;
+}

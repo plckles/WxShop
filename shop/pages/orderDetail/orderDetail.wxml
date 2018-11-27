@@ -1,0 +1,56 @@
+<!--订单详情-->
+<view class='nav con'>等待买家付款</view>
+
+<view class='con'>
+  <!--待收货-->
+  <view class='con-item-1'>
+    <text>卖家配送中</text>
+    <image src='../../image/fh.png' style='width:28rpx;height:42rpx;float:right;margin-top:20rpx;'></image>
+  </view>
+
+  <view class='con-item flex'>
+    <image src='../../image/address.png' style='width:48rpx;height:58rpx;margin-top:40rpx;'></image>
+    <view class='item-1 column'>
+      <text>收货地址:上海市徐汇区</text>
+      <text class='top'>收货人:某某</text>
+      <text class='top'>联系方式:15024554585</text>
+    </view>
+  </view>
+</view>
+<view class='con'>
+    <view class='con-item-2 flex'>
+      <image style='width:200rpx;height:160rpx;' src='../../image/10.jpg'></image>
+      <view class='column' style='margin-left:40rpx;'>
+        <text class='titlt'>金士顿U盘</text>
+        <text class='titlt' style='color:#d0d0d0;'>颜色:黑色，尺寸:xl</text>
+        <text class='titlt'>￥399</text>
+      </view>
+    </view>
+</view>
+<view class='con'>
+  <view class='con-item-2 con-item-3 flex'>
+    <text>配送方式</text>
+    <text>快递</text>
+  </view>
+</view>
+<view class='con-item-4'>
+  <text style='font-size:30rpx;'>订单信息</text>
+  <block>
+    <view class='flex' style='margin-top:20rpx;color:#999999;'>
+      <view style='width:25%;'>支付方式:</view>
+      <text>微信支付</text>
+    </view>
+    <view class='flex' style='margin-top:20rpx;color:#999999;'>
+      <view style='width:25%;'>微信交易号:</view>
+      <text>1215454164552</text>
+    </view>
+  </block>
+</view>
+<view class='btn flex'>
+   <view class='btn-con flex' style='flex:2;'>
+      <image style='width:45rpx;height:45rpx;margin:25rpx;' src='../../image/phone.png'></image>
+      <view style='height:98rpx;line-height:98rpx;'>拨打电话</view>
+   </view>
+   <view class='btn-con' style='background:#ececec;'>取消订单</view>
+   <view class='btn-con' style='background:#ebcc6d;'>提交订单</view>
+</view>
