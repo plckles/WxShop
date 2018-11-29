@@ -35,7 +35,7 @@
       <text>商家</text>
    </view>
    <view class='nav-item column'>
-      <image class='tubiao' src='../../image/collection.png'></image>
+      <image class='tubiao' src='../../image/{{showXin? "collection":"xin"}}.png' bindtap='collect'></image>
       <text>收藏</text>
    </view>
    <view class='nav-con' style='background:#ececec;' bindtap='shopCart' data-index='1'>加入购物车</view>
@@ -82,4 +82,3 @@
     </view>
    
 </view>
-

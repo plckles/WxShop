@@ -17,6 +17,7 @@ Page({
     showData: false,
     showModel: false,
     num: 1,//购买数量
+    showXin: '',
   },
 
   /**
@@ -127,15 +128,30 @@ Page({
     var that = this;
     console.log(that.data.id)
     if(that.data.id == 1){
-
+      that.setData({
+        showData: false,
+        showModel: false
+      })
     }else{
       that.setData({
         showData: false,
         showModel: false
       })
       wx.navigateTo({
-        url: '../order/order',
+        url: '../conOrder/conOrder',
       })
     }
+  },
+  /**收藏 */
+  collect(){
+   if(!this.data.showXin == true){
+     this.setData({
+       showXin:true
+     })
+   }else{
+     this.setData({
+       showXin: false
+     })
+   }
   }
 })

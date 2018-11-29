@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/goodDetail/goodDetail",
-    "pages/order/order",
+    "pages/conOrder/conOrder",
     "pages/orderDetail/orderDetail",
     "pages/index/index",
     "pages/logs/logs",
