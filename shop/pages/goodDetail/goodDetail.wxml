@@ -8,8 +8,8 @@
     </block>
   </swiper>
   <view class='price column'>
-    <text style='font-size:40rpx;font-weight:600;'>￥300</text>
-    <text style='font-size:32rpx;margin-top:30rpx;'>金士顿U盘</text>
+    <text class='jiage'>￥300</text>
+    <text class='futitle'>金士顿U盘</text>
   </view>
 </view>
 <view class='stock flex'>
@@ -31,19 +31,54 @@
 <view style='height:150rpx;'></view>
 <view class='nav flex'>
    <view class='nav-item column'>
-      <image class='tubiao'></image>
+      <image class='tubiao' src='../../image/phone.png'></image>
       <text>商家</text>
    </view>
    <view class='nav-item column'>
-      <image class='tubiao'></image>
+      <image class='tubiao' src='../../image/{{showXin? "collection":"xin"}}.png' bindtap='collect'></image>
       <text>收藏</text>
    </view>
-   <view class='nav-con' style='background:#ececec;'>加入购物车</view>
-   <view class='nav-con' style='background:#ebcc6d;'>立即购买</view>
+   <view class='nav-con' style='background:#ececec;' bindtap='shopCart' data-index='1'>加入购物车</view>
+   <view class='nav-con' style='background:#ebcc6d;' bindtap='purchase' data-index='2'>立即购买</view>
 </view>
 
 
-<!--立即购买-->
-
-
-<!--加入购物车-->
+<!--立即购买--><!--加入购物车-->
+<view class="shadel"  style="display:{{showData? 'block':'none'}}"></view>
+<view class='selModel' style="display:{{showModel? 'block':'none'}}">
+    <view>
+        <image src='../../image/close.png' style='width:48rpx;height:48rpx;margin-top:30rpx;padding-right:30rpx;float:right;' bindtap='close'></image>
+        <view class='content flex'>
+          <image src='../../image/10.jpg' style='width:300rpx;height:200rpx;'></image>
+          <view class='con-item column'>
+              <text class='jiage'>￥300</text>
+              <text class='futitle'>库存：20</text>
+              <text class='futitle'>已选择“黑色”</text>
+          </view>
+        </view>
+        <view class='lab'>
+            <text class='shaixuan'>颜色分类</text>
+            <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>
+              <view class='lab-item active'>黑色</view>
+              <view class='lab-item'>白色</view>
+            </view>
+        </view>
+        <view class='lab size'>
+            <text class='shaixuan'>尺码选择</text>
+            <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>
+              <view class='lab-item active'>xxl</view>
+              <view class='lab-item'>xl</view>
+            </view>
+        </view>
+        <view class='lab size'>
+            <text class='shaixuan'>购买数量</text>
+            <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>
+                <image  mode='scaleToFill' data-num='{{num}}' bindtap='jian' style='width:35rpx;height:35rpx;' src='../../image/jian.png'></image>
+                <text class='nums'>{{num}}</text>
+                <image bindtap='jia' data-num='{{num}}' mode='scaleToFill' style='width:38rpx;height:38rpx;' src='../../image/jia.png'></image>
+            </view>
+        </view>
+        <view class='nav-1' bindtap='confirm'>确定</view>
+    </view>
+   
+</view>

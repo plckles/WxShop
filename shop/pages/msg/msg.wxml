@@ -1,0 +1,11 @@
+<!--我的消息-->
+<view class='beijin'></view>
+<view class='content'>
+  <view class='con-item flex'>
+    <image src='../../image/msg.png' style='width:58rpx;height:74rpx;'></image>
+    <view class='item-x column'>
+      <text>尊敬的某某会员您好！你的商品已签收</text>
+      <text style='color:#999999;margin-top:20rpx;'>你购买的施华洛世奇水晶项链订单已完成</text>
+    </view>
+  </view>
+</view>

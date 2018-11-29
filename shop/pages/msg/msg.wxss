@@ -1,0 +1,21 @@
+/* pages/msg/msg.wxss */
+.beijin{
+  height:80rpx;
+  background: #ebcc6d;
+}
+.content{
+  width: 90%;
+  margin:-80rpx auto;
+  border-radius: 30rpx;
+  box-shadow: 0 10rpx 30rpx #ececec;
+  background: #fff;
+  margin-bottom: 45rpx;
+}
+.con-item{
+  border-bottom: 1px solid #ececec;
+  padding: 35rpx;
+}
+.item-x{
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}

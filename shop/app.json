@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/conOrder/conOrder",
+    "pages/orderDetail/orderDetail",
+    "pages/msg/msg",
+    "pages/balance/balance"
     "pages/goodslist/goods",
     "pages/index/index",
     "pages/cart/cart",

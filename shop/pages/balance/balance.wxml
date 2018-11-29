@@ -1,0 +1,12 @@
+<!--余额明细-->
+<view class='beijin'></view>
+<view class='content'>
+  <view class='con-item'>
+    <view class='item-x flex'>
+      <text>充值</text>
+      <text style='font-weight:600;'>+800</text>
+    </view>
+    <view style='margin-top:20rpx;font-size:30rpx;color:#999999;'>2018-11-22 16:32</view>
+  </view>
+</view>
+<view class='height:45rpx;'></view>
