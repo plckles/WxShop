@@ -1,21 +1,18 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* pages/index/index.wxss */
+.warp-nav{width: 100%;position: relative;}
+.search{width: 100%;height: 80rpx;background: rgba(0, 0, 0, 0.3);align-items: center;
+  position: absolute;top: 0;left: 0;}
+.ipt{width: 80%;background: #fff;border-radius:36rpx;margin: 0 auto;padding-left: 16rpx;font-size: 26rpx;
+  color: #666;}
+.warp-nav image{width: 100%;height: 400rpx;}
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
+.centet{margin-top: 40rpx;padding-left: 40rpx;}
+.title{text-align: center;font-size: 30rpx;color: #ebcc6d;margin-bottom: 40rpx;}
+.title::before,.title::after{
+  content: "";
+  width: 10rpx;height: 10rpx;border-radius: 50%;
+  background: #ebcc6d;display:inline-block;vertical-align:middle;margin-right: 20rpx;}
+.title::after{margin-left: 20rpx;}
+.scroll_box{white-space:nowrap;}
+.box_con{display: inline-block;margin-right: 30rpx;}
+.box_con image{width: 240rpx;height: 180rpx;border-radius: 20rpx;}

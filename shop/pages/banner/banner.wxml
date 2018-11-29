@@ -1,0 +1,21 @@
+<!--pages/banner/banner.wxml-->
+<view class='banner-top'>
+  <image mode='scaleToFill' class='banner-img' src='../../image/1.jpg'></image>
+</view>
+
+
+<view class='top-nav column'>
+  <text class='top-nav-title'>今日到店有惊喜</text>
+  <text>今日到店有惊喜今日到店有惊喜今日到店有惊喜今日到店有惊喜今日到店有惊喜今日到店有惊喜今日到店有惊喜</text>
+  <image mode='scaleToFill' class='nav-img' src='../../image/1.jpg'></image>
+</view>
+
+<view class='top-nav column'>
+  <text class='top-nav-title'>相关商品推荐</text>
+  <view class='flex cot-content'>
+    <image wx:for="{{5}}" mode='scaleToFill' src='../../image/8.jpg'></image>
+  </view>
+</view>
+
+
+

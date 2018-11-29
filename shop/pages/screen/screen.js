@@ -1,20 +1,47 @@
-// pages/index/index.js
+// pages/screen/screen.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    model:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+   },
+  showsceen(){
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
 
+    animation.right(0).step()
+
+    this.setData({
+      model:true,
+      showsceen: animation.export()
+    })
   },
+  hidden(){
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
 
+    animation.right('-600rpx').step()
+
+    this.setData({
+      model: false,
+      showsceen: animation.export()
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +53,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let query = wx.createSelectorQuery().in(this);
+    query.select('.top-warp').boundingClientRect((res) => {
+      console.log(res)
+      // 计算容器高度
+      this.setData({
+        height: res.height
+      })
+    }).exec()
   },
 
   /**

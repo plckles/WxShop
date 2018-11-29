@@ -1,0 +1,15 @@
+<!--收藏-->
+<view class='flex colle-list'>
+  <image mode='scaleToFill' class='colle-img' src='../../image/8.jpg'></image>
+  <view class='colle-ri column'>
+    <view class='column colle-ri-top'>
+      <text>施华洛世奇大师级打开手机</text>
+      <text class='colle-cor'>236人收藏</text>
+    </view>
+    <view class='colle-ri-bot flex'>
+      <text>¥269</text>
+      <image mode='scaleToFill' class='colle-cart' src='../../image/colle.png'></image>
+    </view>
+  </view>
+</view>
+
