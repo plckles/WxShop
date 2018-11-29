@@ -1,0 +1,8 @@
+/* pages/banner/banner.wxss */
+.banner-img{width: 100%;height: 400rpx;}
+.top-nav{margin-top: 30rpx;padding: 0 40rpx;font-size: 26rpx;color: #999;}
+.top-nav-title{font-size: 30rpx;font-weight: 700;margin-bottom: 30rpx;}
+.nav-img{margin-top: 30rpx;width: 100%;height: 400rpx;border-radius: 20rpx;}
+.cot-content{flex-wrap: wrap;}
+.cot-content image{width: 210rpx;height: 160rpx;border-radius: 20rpx;margin-bottom: 20rpx;}
+.cot-content image:nth-child(2),.cot-content image:nth-child(5),.cot-content image:nth-child(8){margin: 0 20rpx;}

@@ -1,0 +1,53 @@
+<!--筛选-->
+<view class='top-warp'>
+  <view class='search flex'>
+    <input placeholder='搜索'></input>
+  </view>
+  <view class='type flex'>
+    <text class='showcor'>综合</text>
+    <view class='x_center money '>
+      <text>价格升序</text>
+      <image mode='scaleToFill' style='width:32rpx;height:32rpx;margin-left:6rpx;' src='../../image/icon-b.png'></image>
+    </view>
+    <text class=''>销量</text>
+    <text class=''>新品</text>
+    <text class='' catchtap='showsceen'>筛选</text>
+  </view>
+</view>
+<view style='height:{{height}}px'></view>
+<scroll-view scrool-y class='scrool-warp'>
+  <view class='content flex'>
+    <view class='column goods' wx:for="{{6}}">
+      <image mode='scaleToFill' src='../../image/8.jpg'></image>
+      <view class='bot-warp column'>
+        <text class='goodsmon'>¥269</text>
+        <text class='goodstype'>汤姆福特 炫彩唇釉</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 遮罩 -->
+<view class='model' bindtap='hidden' style='display:{{model? "block":"none"}}'></view>
+<view animation="{{showsceen}}" class='sceenwrap'>
+  <view class='showsceen column'>
+    <text class='title'>价格区间（元）</text>
+    <view class='moents x_center'>
+      <input class='ipt'></input>
+      <text style='margin:0 20rpx;'>--</text>
+      <input class='ipt'></input>
+    </view>
+    <text class='title'>分类</text>
+    <view class='flex con-warp'>
+      <text class='con-text' wx:for="{{8}}">某某某</text>
+    </view>
+    <text class='title'>分类</text>
+    <view class='flex con-warp'>
+      <text class='con-text' wx:for="{{8}}">某某某</text>
+    </view>
+  </view>
+  <view class='flex sceen-bots'>
+    <text>重置</text>
+    <text>确认</text>
+  </view>
+</view>
