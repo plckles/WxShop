@@ -1,2 +1,18 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!--   首页  -->
+<view class='warp-nav'>
+  <view class='search flex'>
+    <input type='text' class='ipt' placeholder='搜索'></input>
+  </view>
+  <image mode='scaleToFill' src='../../image/8.jpg'></image>
+</view>
+
+<view class='centet column'>
+  <text class='title'>热门产品</text>
+   <scroll-view scroll-x="true" class='scroll_box' style='width:100%'>
+    <block wx:for="{{5}}" >
+      <view class='box_con'>
+        <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      </view>
+    </block>
+  </scroll-view>  
+</view>

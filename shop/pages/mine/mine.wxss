@@ -1,0 +1,31 @@
+/* pages/mine/mine.wxss */
+page{background: #ececec;}
+.use-img{width: 100rpx;height: 100rpx;border-radius: 50%;}
+.nav-top{background: #ebcc6d; color: #fff;padding-left: 50rpx;height: 200rpx;font-size: 24rpx;}
+.nav-top text{margin-left: 30rpx;}
+.icon-s{width:50rpx;height: 50rpx;border-radius: 50%;}
+.nav-left{align-items: center;flex: 1;}
+.nav-lefts{flex: 1.3;}
+
+.navs{width:80%;margin: 0 auto;border-radius: 30rpx;padding: 40rpx;background: #ffffff;
+  margin-top: -50rpx;font-size:24rpx;color: #333;}
+.numcard{margin-top: 20rpx;}
+.numcards{font-size: 30rpx;font-weight: 700;margin-top: 20rpx;}
+.nav-left:nth-child(2){border-left:2rpx solid #ececec;border-right: 2rpx solid #ececec; }
+
+.use-order{width: 90%;margin: 0 auto;background: #fff;border-radius: 30rpx;
+  margin-top: 30rpx;padding: 24rpx 0 40rpx 0;}
+.u-ord-title{margin:0 40rpx;}
+.use-order-bot{margin: 40rpx 40rpx 0 40rpx;justify-content: space-between;}
+.icon-w{align-items: center;}
+.icon-w text{font-size:24rpx; color: #333;margin-top: 24rpx;}
+.icon-o{width:64rpx;height: 64rpx;border-radius: 50%;}
+
+.content-bot{width: 72%;margin: 0 auto;margin-top: 30rpx;background: #fff;border-radius: 30rpx;
+  padding:42rpx 68rpx;}
+.con-top{align-items: center;}
+.con-top image{width:80rpx;height: 80rpx;border-radius: 50%;}
+.con-top text{font-size:24rpx;color: #333;margin-top: 16rpx;}
+.heng{border-bottom: 2rpx solid #ececec;padding-bottom: 40rpx;justify-content: space-between;}
+.heng:last-child{margin-top: 30rpx;border: 0rpx;
+}

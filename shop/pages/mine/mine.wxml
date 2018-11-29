@@ -1,0 +1,72 @@
+<!--pages/mine/mine.wxml-->
+<view class='nav-top '>
+  <view class='x_center'>
+    <image mode='scaleToFill' class='use-img' src='../../image/1.jpg'></image>
+    <text>某某某</text>
+  </view>
+</view>
+
+<view class='navs flex'>
+  <view  class='nav-lefts column'>
+    <text>会员卡号</text>
+    <text class='numcards'>032423847</text>
+  </view>
+  <view  class='nav-left column'>
+    <image class='icon-s' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <text class='numcard'>积分:2222</text>
+  </view>
+  <view  class='nav-left column'>
+    <image class='icon-s' mode='scaleToFill' src='../../image/1.jpg'></image>
+    <text class='numcard'>余额:4343</text>
+  </view>
+</view>
+
+
+<view class='use-order column'>
+  <text class='u-ord-title'>我的订单</text>
+  <view class='use-order-bot flex'>
+    <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+      <text>全部订单</text>
+    </view>
+    <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+      <text>待付款</text>
+    </view>
+    <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+      <text>待发货</text>
+    </view>
+    <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+      <text>待收货</text>
+    </view>
+    <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+      <text>售后</text>
+    </view>
+  </view>
+</view>
+
+<view class='content-bot column'>
+  <view class='flex heng'>
+    <view class='con-top column'>
+      <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      <text>我的资料</text>
+    </view>
+    <view class='con-top column'>
+      <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      <text>我的资料</text>
+    </view>
+    <view class='con-top column'>
+      <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      <text>我的资料</text>
+    </view>
+  </view>
+  <view class='flex heng'>
+    <view class='con-top column'>
+      <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      <text>我的资料</text>
+    </view>
+  </view>
+</view>
