@@ -1,0 +1,48 @@
+<!--我的资料-->
+<view class='topcorlor'></view>
+
+<view class='content column'>
+  <view class='x_center top-con'>
+    <text>头像</text>
+    <view class='x_center top-con-ri'>
+      <image mode='scaleToFill' class='use-i' src='../../image/8.jpg'></image>
+      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    </view>
+  </view>
+  <view class='x_center top-con'>
+    <text>昵称</text>
+    <view class='x_center top-con-ri'>
+      <input placeholder='内容'></input>
+      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    </view>
+  </view>
+  <view class='x_center top-con'>
+    <text>邮箱</text>
+    <view class='x_center top-con-ri'>
+      <input type='text' placeholder='内容'></input>
+      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    </view>
+  </view>
+  <view class='x_center top-con'>
+    <text>生日</text>
+    <view class='x_center top-con-ri'>
+      <picker mode="date" value="{{date}}" start="1700-09-01" end="2030-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    </view>
+  </view>
+  <view class='x_center top-con'>
+    <text>性别</text>
+    <view class='x_center top-con-ri'>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+         {{array[index]}}
+        </view>
+      </picker>
+      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    </view>
+  </view>
+</view>

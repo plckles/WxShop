@@ -1,17 +1,18 @@
 {
   "pages":[
+    "pages/mine/mine",          
+    "pages/index/index",
+    "pages/info/information",
     "pages/conOrder/conOrder",
     "pages/orderDetail/orderDetail",
     "pages/msg/msg",
-    "pages/balance/balance"
+    "pages/balance/balance",
     "pages/goodslist/goods",
-    "pages/index/index",
     "pages/cart/cart",
     "pages/screen/screen",
     "pages/collection/collection",
     "pages/order/order",
     "pages/banner/banner",
-    "pages/mine/mine",
     "pages/goodDetail/goodDetail"
   ],
   "window":{

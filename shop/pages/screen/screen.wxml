@@ -17,7 +17,7 @@
 <view style='height:{{height}}px'></view>
 <scroll-view scrool-y class='scrool-warp'>
   <view class='content flex'>
-    <view class='column goods' wx:for="{{6}}">
+    <view class='column goods' wx:for="{{6}}" bindtap='checkdetail'>
       <image mode='scaleToFill' src='../../image/8.jpg'></image>
       <view class='bot-warp column'>
         <text class='goodsmon'>¥269</text>

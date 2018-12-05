@@ -1,3 +1,4 @@
+
 // pages/mine/mine.js
 Page({
 
@@ -12,9 +13,52 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+  }, 
+  submit(e){
+    console.log(e)
   },
-
+  getformid(e){
+    wx.request({
+      url: 'https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=ACCESS_TOKEN',
+      data: {
+        "touser": "OPENID",
+        "template_id": "W40sveGSR77fTu-WPRZrdi_3IG5SD9XdW_K-Zmcoi7s",
+        "form_id": "FORMID",
+      },
+      method: 'POST',
+      success: res => {
+        console.log(res)
+      }
+    })
+  },
+  checkinfo(){
+    wx.navigateTo({
+      url: '../info/information',
+    })
+  },
+  checkbalance(){
+    wx.navigateTo({
+      url: '../balance/balance',
+    })
+  },
+  checkcolle(){
+    wx.navigateTo({
+      url: '../collection/collection',
+    })
+  },
+  checkmsg(){
+    wx.navigateTo({
+      url: '../msg/msg',
+    })
+  },
+  checkorder(e){
+    console.log(e)
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../order/order?id='+id,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

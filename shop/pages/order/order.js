@@ -1,6 +1,6 @@
 // pages/order/order.js
 const app = getApp()
-import wxRequest from '../../utils/ruquest.js'
+// import wxRequest from '../../utils/ruquest.js'
 Page({
 
   /**
@@ -14,6 +14,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    if(options.id){
+      this.setData({
+        currentTab:options.id
+      })
+    }
     var that = this
     wx.getSystemInfo({
       success: function (res) {
@@ -23,16 +29,16 @@ Page({
         });
       }
     });
-    var url = app.globalData.https + "PEApi/myorder", data = { customerId: app.globalData.userInfo.id };
-    var postLikeRequest = wxRequest.postRequest(url, data);
-    // 订单列表
-    postLikeRequest.then(e => {
-      console.log(e)
-      this.setData({
-        goosList: e.data.obj,
-        https: app.globalData.https
-      })
-    })
+    // var url = app.globalData.https + "PEApi/myorder", data = { customerId: app.globalData.userInfo.id };
+    // var postLikeRequest = wxRequest.postRequest(url, data);
+    // // 订单列表
+    // postLikeRequest.then(e => {
+    //   console.log(e)
+    //   this.setData({
+    //     goosList: e.data.obj,
+    //     https: app.globalData.https
+    //   })
+    // })
   },
   bindChange: function (e) {
     this.setData({ currentTab: e.detail.current });

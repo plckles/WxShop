@@ -14,7 +14,7 @@
       <text>您还没有相关订单</text>
     </view>
 </template>
-
+ 
 <template name="cart-goods-list">
     <view class="list-top">
         <view class="label">购物车</view>

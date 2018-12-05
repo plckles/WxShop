@@ -1,9 +1,12 @@
 <!--pages/mine/mine.wxml-->
 <view class='nav-top '>
-  <view class='x_center'>
-    <image mode='scaleToFill' class='use-img' src='../../image/1.jpg'></image>
-    <text>某某某</text>
-  </view>
+  <!-- <form report-submit bindsubmit='submit'>  -->
+    <!-- <button form-type='submit' class='sub'>都是</button> -->
+    <view class='x_center'>
+      <image mode='scaleToFill' class='use-img' src='../../image/1.jpg'></image>
+      <text>某某某</text>
+    </view>
+  <!-- </form> -->
 </view>
 
 <view class='navs flex'>
@@ -12,11 +15,11 @@
     <text class='numcards'>032423847</text>
   </view>
   <view  class='nav-left column'>
-    <image class='icon-s' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <image class='icon-s' mode='scaleToFill' src='../../image/use-inte.png'></image>
     <text class='numcard'>积分:2222</text>
   </view>
   <view  class='nav-left column'>
-    <image class='icon-s' mode='scaleToFill' src='../../image/1.jpg'></image>
+    <image mode='widthFix' class='icon-s' src='../../image/use-money.png'></image>
     <text class='numcard'>余额:4343</text>
   </view>
 </view>
@@ -25,48 +28,48 @@
 <view class='use-order column'>
   <text class='u-ord-title'>我的订单</text>
   <view class='use-order-bot flex'>
-    <view class='column icon-w'>
-      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <view class='column icon-w' bindtap='checkorder' data-id='0'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/icon_order.png'></image>
       <text>全部订单</text>
     </view>
-    <view class='column icon-w'>
-      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <view class='column icon-w' bindtap='checkorder' data-id='1'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/icon_dfk.png'></image>
       <text>待付款</text>
     </view>
-    <view class='column icon-w'>
-      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <view class='column icon-w' bindtap='checkorder' data-id='2'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/icon_dfh.png'></image>
       <text>待发货</text>
     </view>
-    <view class='column icon-w'>
-      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <view class='column icon-w' bindtap='checkorder' data-id='3'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/icon_dsh.png'></image>
       <text>待收货</text>
     </view>
-    <view class='column icon-w'>
-      <image class='icon-o' mode='scaleToFill' src='../../image/8.jpg'></image>
+    <!-- <view class='column icon-w'>
+      <image class='icon-o' mode='scaleToFill' src='../../image/8.png'></image>
       <text>售后</text>
-    </view>
+    </view> -->
   </view>
 </view>
 
 <view class='content-bot column'>
   <view class='flex heng'>
-    <view class='con-top column'>
-      <image mode='scaleToFill' src='../../image/1.jpg'></image>
+    <view class='con-top column' bindtap='checkinfo'>
+      <image mode='scaleToFill' src='../../image/use-zl.png'></image>
       <text>我的资料</text>
     </view>
-    <view class='con-top column'>
-      <image mode='scaleToFill' src='../../image/1.jpg'></image>
-      <text>我的资料</text>
+    <view class='con-top column' bindtap='checkbalance'>
+      <image mode='scaleToFill' src='../../image/use-yemx.png'></image>
+      <text>余额明细</text>
     </view>
-    <view class='con-top column'>
-      <image mode='scaleToFill' src='../../image/1.jpg'></image>
-      <text>我的资料</text>
+    <view class='con-top column' bindtap='checkcolle'>
+      <image mode='scaleToFill' src='../../image/use-colle.png'></image>
+      <text>我的收藏</text>
     </view>
   </view>
-  <view class='flex heng'>
+  <view class='flex heng' bindtap='checkmsg'>
     <view class='con-top column'>
-      <image mode='scaleToFill' src='../../image/1.jpg'></image>
-      <text>我的资料</text>
+      <image mode='scaleToFill' src='../../image/use-msg.png'></image>
+      <text>我的消息</text>
     </view>
   </view>
 </view>

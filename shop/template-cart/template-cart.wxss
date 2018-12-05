@@ -22,7 +22,7 @@ page{
 .title-boxs image{width:192rpx;height: 181rpx;margin-bottom: 30rpx;}
 .to-index-btn{
     color:#fff;
-    background:#ff9a9e;
+    background:#edcc6d;
     border-radius:6px;
     width:300rpx;
     height:70rpx;

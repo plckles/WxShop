@@ -14,7 +14,16 @@ Page({
   onLoad: function (options) {
 
   },
-
+  checkdetail(){
+    wx.navigateTo({
+      url: '../banner/banner',
+    })
+  },
+  gooddetail(){
+    wx.navigateTo({
+      url: '../goodDetail/goodDetail',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

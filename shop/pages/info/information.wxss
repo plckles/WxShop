@@ -1,0 +1,11 @@
+/* pages/info/information.wxss */
+page{background: #ececec;}
+.topcorlor{height: 100rpx;width: 100%; background: #ebcc6d;}
+.content{width:90%;margin: -40rpx auto 0 auto;background: #fff;
+  border-radius: 30rpx;padding-top: 30rpx;}
+.use-i{width:90rpx;height: 90rpx;border-radius: 50%;}
+.top-con{justify-content: space-between;padding:30rpx;border-bottom: 2rpx solid #ececec;
+font-size: 30rpx;color: #333;}
+.top-con:last-child{border: 0rpx;}
+.top-con input{text-align: right;}
+.user-ri{width: 15rpx;height: 28rpx;margin-left: 30rpx;}

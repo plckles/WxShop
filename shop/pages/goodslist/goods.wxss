@@ -48,7 +48,7 @@
     flex-wrap: wrap;}
 .types{
   align-items: center;margin-bottom: 30rpx;font-size: 24rpx;color: #000;}
-.types:nth-child(2),.types:nth-child(5),.types:nth-child(8){margin: 0 30rpx;}
+.types:nth-child(2),.types:nth-child(5),.types:nth-child(8){margin: 0 26rpx;}
 .types image{width:132rpx;height: 132rpx;}
 .types text{margin-top: 14rpx;}
 

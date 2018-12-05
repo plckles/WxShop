@@ -1,16 +1,41 @@
 <!--   首页  -->
+<!-- banner 轮播 没有banner 详情 -->
 <view class='warp-nav'>
   <view class='search flex'>
     <input type='text' class='ipt' placeholder='搜索'></input>
   </view>
-  <image mode='scaleToFill' src='../../image/8.jpg'></image>
+  <image bindtap='checkdetail' mode='scaleToFill' src='../../image/8.jpg'></image>
 </view>
 
 <view class='centet column'>
   <text class='title'>热门产品</text>
    <scroll-view scroll-x="true" class='scroll_box' style='width:100%'>
-    <block wx:for="{{5}}" >
-      <view class='box_con'>
+    <block wx:for="{{5}}">
+      <view class='box_con' bindtap='gooddetail'>
+        <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      </view>
+    </block>
+  </scroll-view>  
+</view>
+
+
+<view class='centet column'>
+  <text class='title'>新品上架</text>
+   <scroll-view scroll-x="true" class='scroll_box' style='width:100%'>
+    <block wx:for="{{5}}">
+      <view class='box_con' bindtap='gooddetail'>
+        <image mode='scaleToFill' src='../../image/1.jpg'></image>
+      </view>
+    </block>
+  </scroll-view>  
+</view>
+
+
+<view class='centet column'>
+  <text class='title'>每日推荐</text>
+   <scroll-view scroll-x="true" class='scroll_box' style='width:100%'>
+    <block wx:for="{{5}}">
+      <view class='box_con' bindtap='gooddetail'>
         <image mode='scaleToFill' src='../../image/1.jpg'></image>
       </view>
     </block>

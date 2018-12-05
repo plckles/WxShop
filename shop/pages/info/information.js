@@ -1,11 +1,13 @@
-// pages/screen/screen.js
+// pages/info/information.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    model:false
+    array:["男","女"],
+    index:0,
+    date: '2016-09-01',
   },
 
   /**
@@ -13,38 +15,19 @@ Page({
    */
   onLoad: function (options) {
     
-   },
-  showsceen(){
-    var animation = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'ease',
-    })
-    this.animation = animation
-
-    animation.right(0).step()
-
+  },
+  // 选择 性别
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      model:true,
-      showsceen: animation.export()
+      index: e.detail.value
     })
   },
-  hidden(){
-    var animation = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'ease',
-    })
-    this.animation = animation
-
-    animation.right('-600rpx').step()
-
+  // 选择日期
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      model: false,
-      showsceen: animation.export()
-    })
-  },
-  checkdetail(){
-    wx.navigateTo({
-      url: '../goodDetail/goodDetail',
+      date: e.detail.value
     })
   },
   /**
@@ -58,14 +41,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let query = wx.createSelectorQuery().in(this);
-    query.select('.top-warp').boundingClientRect((res) => {
-      console.log(res)
-      // 计算容器高度
-      this.setData({
-        height: res.height
-      })
-    }).exec()
+    let date = new Date()
+    this.setData({
+      date: date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+    })
+    console.log(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate())
   },
 
   /**

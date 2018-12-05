@@ -12,7 +12,7 @@
                      bindscroll="onScroll" class="content-scroll">
             <view class="pesticide" id="tty{{item.goods_category_one_id}}" wx:for="{{data}}" wx:for-index="typeOneIndex"
                   wx:key="{{typeOneIndex}}">
-              <view class='column types' wx:for="{{6}}">
+              <view class='column types' wx:for="{{6}}" bindtap="checktype">
                 <image mode='aspectFill' src='../../image/8.jpg'></image>
                 <text>小分类</text>
               </view>

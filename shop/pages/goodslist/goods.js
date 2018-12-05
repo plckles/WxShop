@@ -39,6 +39,7 @@ Page({
       data: listData.data
     })
   },
+  
   chooseType(e) {
     let id = e.currentTarget.dataset.id;
     let index = e.currentTarget.dataset.index;
@@ -66,20 +67,10 @@ Page({
       }
     }
   },
-  tapHandle(e) {
-    let {
-      management
-    } = this.properties
-    if (management) {
-      this.triggerEvent('viewDetailFunc', {
-        id: e.currentTarget.dataset.itemid
-      })
-    }
-  },
-  stepperEvent(e) {
-    let myEventDetail = e.detail;
-    if (myEventDetail.action === 'blur') return
-    this.triggerEvent('ContentEvent', myEventDetail)
+  checktype(){
+    wx.navigateTo({
+      url: '../screen/screen',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
