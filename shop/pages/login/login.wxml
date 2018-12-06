@@ -1,0 +1,17 @@
+<!--登录-->
+<view class="header">
+  <view class="photo">
+    <image src="../../image/1.jpg"  mode="scaleToFill" />
+  </view>
+</view>
+<view class='con'>
+<form bindsubmit='sublogin'>
+  <input placeholder='请输入手机号' class='inp' type='number' name="mobile"></input>
+  <input placeholder='请输入密码' class='inp' name="password" password='true'></input>
+  <view class='flex lab'>
+    <text bindtap="goApply">立即申请</text>
+    <text bindtap="goYanzheng">忘记密码</text>
+  </view>
+  <button class='btn' form-type="submit">登录</button>
+  </form>
+</view>
