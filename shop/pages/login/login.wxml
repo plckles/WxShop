@@ -1,7 +1,7 @@
 <!--登录-->
 <view class="header">
   <view class="photo">
-    <image src="../../image/1.jpg"  mode="scaleToFill" />
+    <image src="{{userinfo.avatarUrl}}"  mode="scaleToFill" />
   </view>
 </view>
 <view class='con'>

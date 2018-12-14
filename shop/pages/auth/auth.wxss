@@ -1,0 +1,30 @@
+/* pages/auth/auth.wxss */
+page{background:rgba(188, 188, 188, 0.5);}
+.headerMain{width:70%;background:#fff;margin: 0 auto;margin-top: 300rpx;
+  border-radius: 20rpx;}
+.title{text-align:center;font-size: 28rpx;color: #333;display: block;font-weight: bold;
+  padding:16rpx 0;border-bottom: 2rpx solid #eee;}
+.headerMain_box{
+  display:flex;justify-content:center;border-bottom:1rpx solid #eaeaea;
+  align-items:center;}
+.headerMain_box_logo{
+    width:100rpx;height:100rpx;border-radius: 50%;overflow: hidden;margin-bottom: 20rpx;}
+.con_sm{font-size: 26rpx;color: #666;text-align: center;display: block;margin-bottom: 20rpx;}
+.con_warp_x{width: 80%;margin: 0 auto;padding: 30rpx 0 0rpx 0;}
+.headerMain_box_logo{
+  width:100rpx;height:100rpx;border-radius: 50%;overflow: hidden;}
+.headerMain_box_logo image{
+  width:100rpx;height:100rpx;border-radius:50%;}
+.sue_msg{
+  font-size: 24rpx;color: #999;margin:20rpx 0 30rpx 0;}
+.sue_msg::before{
+  content: '';
+  width: 8rpx;height: 8rpx;
+  display: inline-block;vertical-align: middle;background: #999;border-radius: 50%;
+  margin-top: -4rpx;margin-right: 14rpx;}
+.use-bot{position: relative;
+  width: 100%;justify-content: space-between;border-top: 2rpx solid #eee;font-size: 28rpx;
+  color: #333;font-weight: bold;}
+.use-bot text{line-height: 60rpx;width: 50%;text-align: center;}
+.use-bot text:last-child{border-left: 2rpx solid #eee;color: #73d676;}
+.btn{position: absolute;height: 100%;right: 0;width: 50%;top: 0; opacity: 0;}

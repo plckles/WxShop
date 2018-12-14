@@ -1,9 +1,10 @@
 {
   "pages":[
-    "pages/password/password",
-    "pages/apply/apply",
+    "pages/auth/auth",
     "pages/login/login",
     "pages/index/index",
+    "pages/password/password",
+    "pages/apply/apply",
     "pages/mine/mine",          
     "pages/info/information",
     "pages/conOrder/conOrder",

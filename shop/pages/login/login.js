@@ -1,18 +1,24 @@
 // pages/login/login.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userinfo:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var info = wx.getStorageSync('info');
+    // console.log(info.avatarUrl)
+    this.setData({
+      userinfo:info
+    })
+    
   },
 
   /**
@@ -82,8 +88,29 @@ Page({
         content: '数据不能为空',
       })
       return false;
+    }else{
+      wx.request({
+        url: app.globalData.https + "/wxapi/login/index",
+        data: {
+          password: password,
+          mobile: mobile
+        },
+        success: function (e) {
+          console.log(e)
+          if (e.data.status == 1) {
+            wx.reLaunch({
+              url: '../index/index',
+            });
+          } else {
+            wx.showModal({
+              title: '友情提示',
+              content: e.data.msg,
+            })
+          }
+        }
+      })
     }
-
+    
 
   }
 })

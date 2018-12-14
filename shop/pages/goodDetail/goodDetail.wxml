@@ -56,20 +56,21 @@
               <text class='futitle'>已选择“黑色”</text>
           </view>
         </view>
-        <view class='lab'>
-            <text class='shaixuan'>颜色分类</text>
-            <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>
-              <view class='lab-item active'>黑色</view>
-              <view class='lab-item'>白色</view>
-            </view>
-        </view>
-        <view class='lab size'>
-            <text class='shaixuan'>尺码选择</text>
-            <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>
-              <view class='lab-item active'>xxl</view>
-              <view class='lab-item'>xl</view>
-            </view>
-        </view>
+       <view class='lab'>
+      <text class='shaixuan'>颜色分类</text>
+      <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;flex-flow: row wrap;'>
+        <text class='lab-item active' wx:for='{{10}}'>黑色</text>
+        <!-- <view class='lab-item'>白色</view> -->
+      </view>
+      
+    </view>
+    <view class='lab size'>
+      <text class='shaixuan'>尺码选择</text>
+      <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;flex-flow: row wrap;'>
+        <view class='lab-item active' wx:for='{{10}}'>xxl </view>
+        <!-- <view class='lab-item'>xl</view> -->
+      </view>
+    </view>
         <view class='lab size'>
             <text class='shaixuan'>购买数量</text>
             <view style='margin-top:20rpx;display:flex;text-align:center;font-size:24rpx;'>

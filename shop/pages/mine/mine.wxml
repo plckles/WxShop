@@ -10,7 +10,7 @@
 </view>
 
 <view class='navs flex'>
-  <view  class='nav-lefts column'>
+  <view  class='nav-lefts column' bindtap='member'>
     <text>会员卡号</text>
     <text class='numcards'>032423847</text>
   </view>

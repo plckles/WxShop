@@ -1,5 +1,6 @@
 // pages/apply/apply.js
 var interval = null //倒计时函数
+var app = getApp()
 Page({
 
   /**
@@ -102,7 +103,6 @@ Page({
       })
       return false;
     }
-    
     that.setData({
       isClick: true,
     })
@@ -124,6 +124,30 @@ Page({
       }
     }, 1000);
 
+    wx.request({
+      url: app.globalData.https + "/wxapi/login/sensms",
+      data: {
+        mobile: that.data.phone,
+        type: 1,
+      },
+      success(res) {
+        console.log(res)
+        if (res.data.status == 1) {
+          wx.showToast({
+            title: '发送成功',
+            icon: 'none',
+            duration: 1000
+          })
+        }else{
+          wx.showToast({
+            title:res.data.msg,
+            icon: 'none',
+            duration: 1000
+          })
+        }
+      }
+    })
+
   },
   submit: function (e) {
     var password = e.detail.value.password;
@@ -140,7 +164,34 @@ Page({
       })    
     } 
     else {
-      
+      wx.request({
+        url: app.globalData.https + "/wxapi/login/register",
+        data: {
+          mobile: phones,
+          code:code,
+          password:password,
+          repass:password2,
+        },
+        success(res) {
+          console.log(res);
+          if (res.data.status == 1) {
+            wx.showToast({
+              title: '注册成功',
+              icon: 'none',
+              duration: 1000
+            })
+            wx.reLaunch({
+              url: '../login/login',
+            })
+          } else {
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              duration: 1000
+            })
+          }
+        }
+      })
      
     }
   }
