@@ -81,5 +81,61 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  /*修改 */
+  submit(e) {
+    var nickname = e.detail.value.nickname
+    var email = e.detail.value.email
+    var birthday = this.data.birthday
+    var sex = this.data.birthday
+    wx.navigateBack({
+      url:'../mine/mine'
+    })
+  },
+  //修改头像
+  chooseImage: function () {
+    let _this = this;
+    wx.showActionSheet({
+      itemList: ['从相册中选择', '拍照'],
+      itemColor: "#f7982a",
+      success: function (res) {
+        if (!res.cancel) {
+          if (res.tapIndex == 0) {
+            _this.chooseWxImage('album')
+          } else if (res.tapIndex == 1) {
+            _this.chooseWxImage('camera')`3WDw@qA`
+          }
+        }
+      }
+    })
+  },
+  chooseWxImage: function (type) {
+    let _this = this;
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: [type],
+      count: 1,
+      success: function (res) {
+        var tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'https://shangdong1.bluehuisaas.com/api/Fuwu/upload_files', //仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          success: function (res) {
+            if (res) {
+              console.log("2222222222")
+              var val = JSON.parse(res.data)
+              console.log(val)
+              imgLists.push(val.list)
+              console.log(imgLists)
+              _this.setData({ url: imgLists })
+            }
+          }
+        })
+        _this.setData({
+          uploadimgs: _this.data.uploadimgs.concat(res.tempFilePaths)
+        })
+      }
+    })
+  },
 })

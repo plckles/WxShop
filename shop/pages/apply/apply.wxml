@@ -1,7 +1,8 @@
 <!--注册-->
 <view class="header">
   <view class="photo">
-    <image src="../../image/1.jpg" mode="" ></image>
+    <!-- <image src="{{userinfo.headimgurl}}" mode="" ></image> -->
+    <open-data type="userAvatarUrl"></open-data>
   </view>
 </view>
 <form bindsubmit='submit'>

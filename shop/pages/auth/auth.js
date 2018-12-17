@@ -65,7 +65,7 @@ Page({
 
   },
   getUserInfo(e) {
-    console.log(e)
+     console.log(e)
     var that = this
     if (e.detail.rawData) {
       app.globalData.userInfo = e.detail.userInfo
@@ -75,7 +75,7 @@ Page({
 
       }
       app.onLaunch()
-      wx.reLaunch({
+      wx.reLaunch({  
         url: '../login/login',
       })
     } else {

@@ -1,7 +1,8 @@
 <!--登录-->
 <view class="header">
   <view class="photo">
-    <image src="{{userinfo.avatarUrl}}"  mode="scaleToFill" />
+    <!-- <image src="{{userinfo.headimgurl}}"  mode="scaleToFill" /> -->
+    <open-data type="userAvatarUrl"></open-data>
   </view>
 </view>
 <view class='con'>

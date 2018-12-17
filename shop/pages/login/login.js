@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     var info = wx.getStorageSync('info');
-    // console.log(info.avatarUrl)
+    console.log(info)
     this.setData({
       userinfo:info
     })
@@ -24,7 +24,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function () {  
 
   },
 
@@ -83,9 +83,8 @@ Page({
     var mobile = e.detail.value.mobile;
     var password = e.detail.value.password;
     if (!(mobile && password)) {
-      wx.showModal({
-        title: '友情提示',
-        content: '数据不能为空',
+      wx.showToast({
+        title: '存在未填写字段',
       })
       return false;
     }else{
@@ -97,14 +96,14 @@ Page({
         },
         success: function (e) {
           console.log(e)
+          wx.setStorageSync("login",e);//登录 
           if (e.data.status == 1) {
             wx.reLaunch({
               url: '../index/index',
             });
           } else {
-            wx.showModal({
-              title: '友情提示',
-              content: e.data.msg,
+            wx.showToast({
+              title: e.data.msg,
             })
           }
         }

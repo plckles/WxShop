@@ -12,13 +12,17 @@ Page({
     codename: '获取验证码',
     crrentTime: 60,//限制倒计时60秒
     isClick: false,//获取验证码按钮，默认允许点击
+    userinfo:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var info = wx.getStorageSync('info');
+    this.setData({
+      userinfo: info
+    })
   },
 
   /**
@@ -164,9 +168,16 @@ Page({
       })    
     } 
     else {
+      var info = wx.getStorageSync('info');
+      if (!info.mobile) {
+        info.mobile = e.detail.value.phones
+        wx.setStorageSync("info", info)
+      }
+      // console.log(info.openid)
       wx.request({
         url: app.globalData.https + "/wxapi/login/register",
         data: {
+          openid: info.openid,
           mobile: phones,
           code:code,
           password:password,
@@ -175,6 +186,7 @@ Page({
         success(res) {
           console.log(res);
           if (res.data.status == 1) {
+            // wx.setStorageSync('info', res.data.info);
             wx.showToast({
               title: '注册成功',
               icon: 'none',

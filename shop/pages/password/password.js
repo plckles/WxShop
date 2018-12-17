@@ -1,5 +1,6 @@
 // pages/password/password.js
 var interval = null //倒计时函数
+var app = getApp()
 Page({
 
   /**
@@ -11,13 +12,18 @@ Page({
     codename: '获取验证码',
     crrentTime: 60,//限制倒计时60秒
     isClick: false,//获取验证码按钮，默认允许点击
+    userinfo:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var info = wx.getStorageSync('info');
+    console.log(info)
+    this.setData({
+      userinfo: info
+    })
   },
 
   /**
@@ -124,6 +130,31 @@ Page({
       }
     }, 1000);
 
+    //获取验证码
+    wx.request({
+      url: app.globalData.https + "/wxapi/login/sensms",
+      data: {
+        mobile: that.data.phone,
+        type: 1,
+      },
+      success(res) {
+        console.log(res)
+        if (res.data.status == 1) {
+          wx.showToast({
+            title: '发送成功',
+            icon: 'none',
+            duration: 1000
+          })
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 1000
+          })
+        }
+      }
+    })
+
   },
   submit: function (e) {
     var password = e.detail.value.password;
@@ -140,7 +171,34 @@ Page({
       })
     }
     else {
-
+      wx.request({
+        url: app.globalData.https + "/wxapi/login/forget",
+        data: {
+          mobile: phones,
+          code: code,
+          password: password,
+          repass: password2,
+        },
+        success(res) {
+          console.log(res);
+          if (res.data.status == 1) {
+            wx.showToast({
+              title: '修改密码成功',
+              icon: 'none',
+              duration: 1000
+            })
+            wx.reLaunch({
+              url: '../login/login',
+            })
+          } else {
+            wx.showToast({
+              title: res.data.msg,
+              icon: 'none',
+              duration: 1000
+            })
+          }
+        }
+      })
 
     }
   }

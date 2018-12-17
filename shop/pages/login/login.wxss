@@ -9,11 +9,8 @@
   width: 188rpx;
   height: 188rpx;
   margin:0 auto;
-}
-.photo image{
-  width: 188rpx;
-  height: 188rpx;
-  border-radius: 50%;
+  border-radius:50%;
+  overflow:hidden;
 }
 .con{
   width: 90%;

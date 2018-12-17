@@ -9,3 +9,14 @@ font-size: 30rpx;color: #333;}
 .top-con:last-child{border: 0rpx;}
 .top-con input{text-align: right;}
 .user-ri{width: 15rpx;height: 28rpx;margin-left: 30rpx;}
+.nav-1{
+  width: 100%;
+  height:88rpx;
+  line-height: 88rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #ebcc6d; 
+  font-size: 33rpx;
+  text-align: center;
+}
