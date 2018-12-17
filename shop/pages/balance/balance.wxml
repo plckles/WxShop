@@ -1,12 +1,16 @@
 <!--余额明细-->
 <view class='beijin'></view>
 <view class='content'>
-  <view class='con-item'>
-    <view class='item-x flex'>
+  <view class='con-item'   wx:for='{{count}}'>
+    <view class='item-x flex' wx:if='{{item.style==1}}'>
       <text>充值</text>
-      <text style='font-weight:600;'>+800</text>
+      <text style='font-weight:600;'>+{{item.amount}}</text>
     </view>
-    <view style='margin-top:20rpx;font-size:30rpx;color:#999999;'>2018-11-22 16:32</view>
+    <view class='item-x flex' wx:else>
+      <text>消费</text>
+      <text style='font-weight:600;'>-{{item.amount}}</text>
+    </view>
+    <view style='margin-top:20rpx;font-size:30rpx;color:#999999;'>{{item.time}}</view>
   </view>
 </view>
 <view class='height:45rpx;'></view>

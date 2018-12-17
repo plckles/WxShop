@@ -3,8 +3,8 @@
   <!-- <form report-submit bindsubmit='submit'>  -->
     <!-- <button form-type='submit' class='sub'>都是</button> -->
     <view class='x_center'>
-      <image mode='scaleToFill' class='use-img' src='../../image/1.jpg'></image>
-      <text>某某某</text>
+      <image mode='scaleToFill' class='use-img' src='{{user.headimgurl}}'></image>
+      <text>{{user.nickname}}</text>
     </view>
   <!-- </form> -->
 </view>
@@ -12,15 +12,15 @@
 <view class='navs flex'>
   <view  class='nav-lefts column' bindtap='member'>
     <text>会员卡号</text>
-    <text class='numcards'>032423847</text>
+    <text class='numcards'>{{user.cardnum}}</text>
   </view>
   <view  class='nav-left column'>
     <image class='icon-s' mode='scaleToFill' src='../../image/use-inte.png'></image>
-    <text class='numcard'>积分:2222</text>
+    <text class='numcard'>积分:{{user.score}}</text>
   </view>
   <view  class='nav-left column'>
     <image mode='widthFix' class='icon-s' src='../../image/use-money.png'></image>
-    <text class='numcard'>余额:4343</text>
+    <text class='numcard'>余额:{{user.balance}}</text>
   </view>
 </view>
 

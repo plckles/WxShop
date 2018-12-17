@@ -4,31 +4,32 @@
 <view class='content column'>
   <view class='x_center top-con'>
     <text>头像</text>
-    <view class='x_center top-con-ri'  bindtap="chooseImage">
-      <image mode='scaleToFill' class='use-i' src='../../image/8.jpg'></image>
-      <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
+    <view class='x_center top-con-ri'>
+    <!-- <view class='x_center top-con-ri'  bindtap="chooseImage"> -->
+      <image mode='scaleToFill' class='use-i' src='{{user.headimgurl}}'></image>
+      <!-- <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image> -->
     </view>
   </view>
   <view class='x_center top-con'>
     <text>昵称</text>
     <view class='x_center top-con-ri'>
-      <input name='nickname' placeholder='内容'></input>
+      <input name='nickname' placeholder='昵称' value='{{user.nickname}}'></input>
       <!-- <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image> -->
     </view>
   </view>
   <view class='x_center top-con'>
     <text>邮箱</text>
     <view class='x_center top-con-ri'>
-      <input name='email' type='text' placeholder='内容'></input>
+      <input name='email' type='text' placeholder='邮箱' value='{{user.email}}'></input>
       <!-- <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image> -->
     </view>
   </view>
   <view class='x_center top-con'>
     <text>生日</text>
     <view class='x_center top-con-ri'>
-      <picker name='birthday' mode="date" value="{{date}}" start="1700-09-01" end="2030-09-01" bindchange="bindDateChange">
+      <picker name='birthday' mode="date" value="{{user.birthday}}" start="1700-09-01" end="2030-09-01" bindchange="bindDateChange">
         <view class="picker">
-          {{date}}
+          {{birthday?birthday:''}}
         </view>
       </picker>
       <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>
@@ -37,9 +38,9 @@
   <view class='x_center top-con'>
     <text>性别</text>
     <view class='x_center top-con-ri'>
-      <picker name='sex' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <picker name='sex' bindchange="bindPickerChange" value="{{user.sex}}" range="{{array}}">
         <view class="picker">
-         {{array[index]}}
+         {{sex?array[sex]:''}}
         </view>
       </picker>
       <image mode='scaleToFill' class='user-ri' src='../../image/fh.png'></image>

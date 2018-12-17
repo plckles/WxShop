@@ -1,5 +1,6 @@
 
 // pages/mine/mine.js
+var app = getApp()
 Page({
 
   /**
@@ -13,7 +14,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this
+    var info = wx.getStorageSync('info')
+    that.setData({
+      id:info.id
+    })
+    wx.request({
+      url: app.globalData.https + '/wxapi/mycenter/information',
+      data: {
+        id: that.data.id
+      },
+      success: function (e) {
+        console.log(e);
+        if (e.data.status == 1) {
+          that.setData({
+            user: e.data.data,
+          })
+        } else {
+          wx.showModal({
+            title: '友情提示',
+            content: e.data.msg,
+          })
+        }
+      },
+      fail: function (e) {
+        console.log(e);
+      }
+
+    })
   }, 
   submit(e){
     console.log(e)
