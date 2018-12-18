@@ -91,11 +91,19 @@ Page({
     var that = this;
     var id = e.currentTarget.dataset.index;
     console.log(e.currentTarget.dataset.index)
-    that.setData({
-      showData: true,
-      showModel: true,
-      id: id
-    })
+    console.log(wx.getStorageSync("login").data)
+    if (wx.getStorageSync("login").data){
+      that.setData({
+        showData: true,
+        showModel: true,
+        id: id
+      })
+    }else{
+      wx.navigateTo({
+        url: '../login/login?id=2',
+      })
+    }
+    
   },
   close(){
     var that = this;

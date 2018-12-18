@@ -1,5 +1,6 @@
 <!--   首页  -->
 <!-- banner 轮播 没有banner 详情 -->
+<import src="../template/tabbar.wxml" />
 <view class='warp-nav'>
   <view class='search flex'>
     <input type='text' class='ipt' placeholder='搜索'></input>
@@ -40,4 +41,12 @@
       </view>
     </block>
   </scroll-view>  
+</view>
+<view style='height:120rpx;'></view>
+
+<!-- 选项卡 -->
+<view class='nav_warp x_center'>
+  <block wx:for="{{typeList}}" wx:key='{{index}}'>
+    <template is='tabbar' data='{{...item}}'></template>
+  </block>
 </view>

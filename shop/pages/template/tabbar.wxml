@@ -1,0 +1,8 @@
+<!-- 底部导航 -->
+<template name='tabbar'>
+  <!-- 自定义组件 -->
+    <view class='nav_item column' data-id='{{id}}' bindtap='checkType' >
+      <image mode='scaleToFill' class='nav_img' src='../../image/{{state? cimg:img}}.png'></image>
+      <text wx:if="{{name}}" class='{{state? "color":""}}'>{{name}}</text>
+    </view>
+</template>

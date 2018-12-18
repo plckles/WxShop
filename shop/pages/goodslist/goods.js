@@ -6,6 +6,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    typeList: [{
+      id: 1,
+      img: "home",
+      cimg: "c-home",
+      name: "首页",
+      state: false
+    }, {
+      id: 2,
+      img: "icon-2",
+      cimg: "c-icon2",
+      name: "全部商品",
+      state: true
+    },
+    {
+      id: 3,
+      img: "cart",
+      cimg: "c-cart",
+      name: "购物车",
+      state: false
+    },
+    {
+      id: 4,
+      img: "mine",
+      cimg: "c-mine",
+      name: "我的",
+      state: false
+    }],
     contentActive: '', // 内容栏id
     navActive: 0, // 导航栏选中id
     heightArr: [],
@@ -38,6 +65,12 @@ Page({
     this.setData({
       data: listData.data
     })
+    var info = wx.getStorageSync('info');
+    this.setData({
+      userinfo: info
+    })
+    console.log(info)
+    console.log(info.store_id)
   },
   
   chooseType(e) {
@@ -119,5 +152,41 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  //自定义导航栏处理函数
+  checkType(e) {
+    var id = e.currentTarget.dataset.id
+    if (id == 1) {
+      wx.reLaunch({
+        url: '../index/index?id=' + id,
+      })
+    } else if (id == 2) {
+      wx.reLaunch({
+        url: '../goodslist/goods?id=' + id,
+      })
+    }
+    else if (id == 3) {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../cart/cart?id=' + id,
+        })
+      } else {
+        wx.reLaunch({
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+    else {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../mine/mine',
+        })
+      } else {
+        wx.reLaunch({
+          // url: '../personal/personal?id=' + id,
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+  },
 })

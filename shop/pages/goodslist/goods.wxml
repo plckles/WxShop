@@ -1,4 +1,5 @@
 <!--<!--components/linkage/linkage.wxml-->
+<import src="../template/tabbar.wxml" />
 <view class="container-linkpage">
     <view class="nav">
         <scroll-view scroll-y="true" style="height: 100%;" class="nav-scroll">
@@ -20,4 +21,11 @@
         </scroll-view>
     </view>
 </view>
+<view style='height:120rpx;'></view>
 
+<!-- 选项卡 -->
+<view class='nav_warp x_center'>
+  <block wx:for="{{typeList}}" wx:key='{{index}}'>
+    <template is='tabbar' data='{{...item}}'></template>
+  </block>
+</view>

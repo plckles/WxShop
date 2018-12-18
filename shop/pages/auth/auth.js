@@ -76,7 +76,7 @@ Page({
       }
       app.onLaunch()
       wx.reLaunch({  
-        url: '../login/login',
+        url: '../index/index',
       })
     } else {
       return false

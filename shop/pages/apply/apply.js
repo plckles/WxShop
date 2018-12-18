@@ -23,6 +23,12 @@ Page({
     this.setData({
       userinfo: info
     })
+    var that = this
+    console.log(options.type)
+    that.setData({
+      type: options.type
+    })
+    
   },
 
   /**
@@ -158,6 +164,7 @@ Page({
     var password2 = e.detail.value.password2;
     var phones = e.detail.value.phones;
     var code = e.detail.value.code;
+    var type = this.data.type;
     if (!(phones && code && password && password2)) {
       wx.showToast({
         title: '存在未填写字段',
@@ -173,7 +180,7 @@ Page({
         info.mobile = e.detail.value.phones
         wx.setStorageSync("info", info)
       }
-      // console.log(info.openid)
+      console.log(type)
       wx.request({
         url: app.globalData.https + "/wxapi/login/register",
         data: {
@@ -192,8 +199,8 @@ Page({
               icon: 'none',
               duration: 1000
             })
-            wx.reLaunch({
-              url: '../login/login',
+            wx.redirectTo({
+              url: '../login/login?type='+ type,
             })
           } else {
             wx.showToast({

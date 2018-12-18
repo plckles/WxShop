@@ -1,8 +1,16 @@
 <!--pages/cart/cart.wxml-->
 <!--index.wxml-->
+<import src="../template/tabbar.wxml" />
 <import src="../../template-cart/template-cart.wxml"/>
 
 <view class="container">
       <template is="{{goodsList.list.length > 0 ? 'cart-goods-list' : 'no-goods'}}" data="{{...goodsList}}"></template> 
 </view>
+<view style='height:120rpx;'></view>
 
+<!-- 选项卡 -->
+<view class='nav_warp x_center'>
+  <block wx:for="{{typeList}}" wx:key='{{index}}'>
+    <template is='tabbar' data='{{...item}}'></template>
+  </block>
+</view>

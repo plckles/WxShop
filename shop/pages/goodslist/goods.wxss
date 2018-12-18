@@ -1,5 +1,5 @@
 /* components/linkage/linkage.wxss */
-
+@import '../template/tabbar.wxss';
 .container-linkpage {
     width: 100%;
     height: 100%;

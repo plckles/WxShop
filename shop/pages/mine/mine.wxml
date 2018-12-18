@@ -1,4 +1,5 @@
 <!--pages/mine/mine.wxml-->
+<import src="../template/tabbar.wxml" />
 <view class='nav-top '>
   <!-- <form report-submit bindsubmit='submit'>  -->
     <!-- <button form-type='submit' class='sub'>都是</button> -->
@@ -72,4 +73,12 @@
       <text>我的消息</text>
     </view>
   </view>
+</view>
+<view style='height:120rpx;'></view>
+
+<!-- 选项卡 -->
+<view class='nav_warp x_center'>
+  <block wx:for="{{typeList}}" wx:key='{{index}}'>
+    <template is='tabbar' data='{{...item}}'></template>
+  </block>
 </view>

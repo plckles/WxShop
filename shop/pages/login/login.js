@@ -18,7 +18,11 @@ Page({
     this.setData({
       userinfo:info
     })
-    
+    console.log(options.id)
+    var that = this
+    that.setData({
+      type:options.id
+    })
   },
 
   /**
@@ -71,17 +75,19 @@ Page({
   },
   goApply: function () {
     wx.navigateTo({
-      url: '../apply/apply'
+      url: '../apply/apply?type='+this.data.type
     });
   },
   goYanzheng: function () {
     wx.navigateTo({
-      url: '../password/password'
+      url: '../password/password?type=' + this.data.type
     });
   },
   sublogin: function (e) {
     var mobile = e.detail.value.mobile;
     var password = e.detail.value.password;
+    var type = this.data.type;
+    console.log(this.data.type)
     if (!(mobile && password)) {
       wx.showToast({
         title: '存在未填写字段',
@@ -98,9 +104,20 @@ Page({
           console.log(e)
           wx.setStorageSync("login",e);//登录 
           if (e.data.status == 1) {
-            wx.reLaunch({
-              url: '../index/index',
-            });
+            // console.log(this.data.type)
+            if(type == 2){
+              wx.navigateBack({
+                url:'../goodDetail/goodDetail'
+              })
+            }else if(type == 3){
+              wx.redirectTo({
+                url: '../cart/cart'
+              })
+            }else if(type == 4){
+              wx.redirectTo({
+                url: '../mine/mine'
+              })
+            }
           } else {
             wx.showToast({
               title: e.data.msg,

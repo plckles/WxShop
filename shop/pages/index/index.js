@@ -5,7 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    typeList: [{
+      id: 1,
+      img: "home",
+      cimg: "c-home",
+      name: "首页",
+      state: true
+    }, {
+      id: 2,
+      img: "icon-2",
+      cimg: "c-icon-2",
+      name: "全部商品",
+      state: false
+    },
+    {
+      id: 3,
+      img: "cart",
+      cimg: "c-cart",
+      name: "购物车",
+      state: false
+    },
+    {
+      id: 4,
+      img: "mine",
+      cimg: "c-mine",
+      name: "我的",
+      state: false
+    }],
   },
 
   /**
@@ -71,5 +97,40 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  //自定义导航栏处理函数
+  checkType(e) {
+    var id = e.currentTarget.dataset.id
+    if (id == 1) {
+      wx.reLaunch({
+        url: '../index/index?id=' + id,
+      })
+    } else if (id == 2) {
+      wx.reLaunch({
+        url: '../goodslist/goods?id=' + id,
+      })
+    }
+    else if (id == 3) {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../cart/cart?id=' + id,
+        })
+      } else {
+        wx.reLaunch({
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+     else {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../mine/mine',
+        })
+      } else {
+        wx.reLaunch({
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+  },
 })

@@ -2,6 +2,33 @@
 var app = getApp()
 Page({
   data: {
+    typeList: [{
+      id: 1,
+      img: "home",
+      cimg: "c-home",
+      name: "首页",
+      state: false
+    }, {
+      id: 2,
+      img: "icon-2",
+      cimg: "c-icon-2",
+      name: "全部商品",
+      state: false
+    },
+    {
+      id: 3,
+      img: "cart",
+      cimg: "c-cart",
+      name: "购物车",
+      state: true
+    },
+    {
+      id: 4,
+      img: "mine",
+      cimg: "c-mine",
+      name: "我的",
+      state: false
+    }],
     goodsList: {
       saveHidden: true,
       totalPrice: 0,
@@ -370,5 +397,40 @@ Page({
     wx.navigateTo({
       url: "/pages/to-pay-order/index"
     })
-  }
+  },
+  //自定义导航栏处理函数
+  checkType(e) {
+    var id = e.currentTarget.dataset.id
+    if (id == 1) {
+      wx.reLaunch({
+        url: '../index/index?id=' + id,
+      })
+    } else if (id == 2) {
+      wx.reLaunch({
+        url: '../goodslist/goods?id=' + id,
+      })
+    }
+    else if (id == 3) {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../cart/cart?id=' + id,
+        })
+      } else {
+        wx.reLaunch({
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+    else {
+      if (wx.getStorageSync("login").data) {
+        wx.reLaunch({
+          url: '../mine/mine',
+        })
+      } else {
+        wx.reLaunch({
+          url: '../login/login?id=' + id,
+        })
+      }
+    }
+  },
 })
